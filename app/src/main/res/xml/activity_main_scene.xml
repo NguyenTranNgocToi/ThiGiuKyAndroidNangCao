@@ -106,7 +106,7 @@
             motion:layout_constraintStart_toEndOf="@+id/buttonTru"
             android:layout_marginLeft="28dp"
             android:layout_marginStart="20dp"
-            android:id="@+id/button4" />
+            android:id="@+id/buttonChia" />
         <Constraint
             android:layout_height="84dp"
             motion:layout_constraintStart_toStartOf="parent"

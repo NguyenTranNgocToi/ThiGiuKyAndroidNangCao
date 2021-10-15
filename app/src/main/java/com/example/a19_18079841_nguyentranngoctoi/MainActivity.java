@@ -16,6 +16,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     ImageView icon1,icon2;
@@ -24,9 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean isServiceConnected=false;
     EditText eda,edb, edkq;
     Button btncong, btntru, btnnhan, btnchia;
-
-
-
+    int x,y;
 
 
     private ServiceConnection mServiceConnection = new ServiceConnection() {
@@ -80,12 +79,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(isServiceConnected){
-                    int x = Integer.parseInt(String.valueOf(eda.getText()));
-                    int y = Integer.parseInt(String.valueOf(eda.getText()));
+
+                    x = Integer.parseInt(eda.getText()+"");
+                    y = Integer.parseInt(edb.getText()+"");
 
                     mServiceMyClass.setAB(x, y);
                     int kq = mServiceMyClass.add();
                     edkq.setText(kq+"");
+
+
                 }
             }
         });
@@ -95,11 +97,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(isServiceConnected){
-                    int x = Integer.parseInt(String.valueOf(eda.getText()));
-                    int y = Integer.parseInt(String.valueOf(eda.getText()));
-                    mServiceMyClass.setAB(x, y);
+                   x = Integer.parseInt(eda.getText()+"");
+                   y = Integer.parseInt(edb.getText()+"");
+                    mServiceMyClass.setAB(x,y);
                     int kq = mServiceMyClass.sub();
                     edkq.setText(kq+"");
+
                 }
             }
         });
@@ -107,11 +110,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(isServiceConnected){
-                    int x = Integer.parseInt(String.valueOf(eda.getText()));
-                    int y = Integer.parseInt(String.valueOf(eda.getText()));
+                     x = Integer.parseInt(eda.getText()+"");
+                    y = Integer.parseInt(edb.getText()+"");
                     mServiceMyClass.setAB(x, y);
                     float kq = mServiceMyClass.mul();
                     edkq.setText(kq+"");
+
                 }
             }
         });
@@ -119,11 +123,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(isServiceConnected){
-                    int x = Integer.parseInt(String.valueOf(eda.getText()));
-                    int y = Integer.parseInt(String.valueOf(eda.getText()));
+                     x = Integer.parseInt(eda.getText()+"");
+                    y = Integer.parseInt(edb.getText()+"");
+                    Toast.makeText(MainActivity.this, "a =" + x, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "b =" + y, Toast.LENGTH_SHORT).show();
                     mServiceMyClass.setAB(x, y);
                     float kq = mServiceMyClass.div();
                     edkq.setText(kq+"");
+
                 }
             }
         });

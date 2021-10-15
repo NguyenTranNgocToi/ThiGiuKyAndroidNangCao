@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<set xmlns:android="http://schemas.android.com/apk/res/android">
-    <scale android:fromXScale="1" android:toXScale="2"  android:duration="2000">
+<set xmlns:android="http://schemas.android.com/apk/res/android" android:fillAfter="true">
+ <translate android:fromXDelta="0"
+     android:toXDelta="-450"
+     android:duration="2000">
 
-    </scale>
+ </translate>
+
+    <translate
+        android:startOffset="2000"
+        android:fromXDelta="0"
+        android:toXDelta="-700"
+        android:duration="2000">
+
+    </translate>
+
+    <translate
+        android:startOffset="4000"
+        android:fromXDelta="0"
+        android:toXDelta="1350"
+        android:duration="2000">
+
+    </translate>
 </set>

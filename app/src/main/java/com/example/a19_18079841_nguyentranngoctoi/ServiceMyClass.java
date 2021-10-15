@@ -40,8 +40,8 @@ public class ServiceMyClass extends Service {
 
     }
     public void setAB(int x, int y){
-        a=x;
-        b=y;
+        this.a=x;
+        this.b=y;
     }
     public void start(){
         Log.e("Service","start");
@@ -57,7 +57,9 @@ public class ServiceMyClass extends Service {
         return  a*b;
     }
     public  float div(){
-        return  a/b;
+        float c = a;
+        float d = b;
+        return  c/d;
     }
 
 
@@ -69,8 +71,6 @@ public class ServiceMyClass extends Service {
 
         Toast.makeText(this, "Service đã bị hủy!", Toast.LENGTH_SHORT).show();
         Log.e("Service","huy");
-        a=-999;
-        b=-999;
     }
 
 

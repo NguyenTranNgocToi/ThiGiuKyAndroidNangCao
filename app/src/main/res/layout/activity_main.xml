@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon1" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon2" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="A"
+        android:textColor="#FAF7F7"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="B"
+        android:textColor="#FAF7F7"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="KQ"
+        android:textColor="#FAF7F7"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/edA"
+        android:layout_width="224dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="40dp"
+        android:background="#C4C4C4"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.279" />
+
+    <EditText
+        android:id="@+id/edB"
+        android:layout_width="224dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="40dp"
+        android:background="#C4C4C4"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/edKQ"
+        android:layout_width="224dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:background="#C4C4C4"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/textView3"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/buttonCong"
+        android:layout_width="82dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#C4C4C4"
+        android:text="+"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@+id/edKQ"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/buttonNhan"
+        android:layout_width="82dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="152dp"
+        android:backgroundTint="#C4C4C4"
+        android:text="x"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonCong"
+        app:layout_constraintStart_toEndOf="@+id/buttonCong"
+        app:layout_constraintTop_toTopOf="@+id/buttonCong"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buttonTru"
+        android:layout_width="82dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="68dp"
+        android:backgroundTint="#C4C4C4"
+        android:text="-"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCong"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/buttonCong"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCong" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="82dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="152dp"
+        android:backgroundTint="#C4C4C4"
+        android:text=":"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonTru"
+        app:layout_constraintStart_toEndOf="@+id/buttonTru"
+        app:layout_constraintTop_toTopOf="@+id/buttonTru" />
+</androidx.constraintlayout.motion.widget.MotionLayout>
